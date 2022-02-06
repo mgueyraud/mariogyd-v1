@@ -1,0 +1,38 @@
+.section_header {
+  margin-top: 120px;
+}
+
+.bigTitle {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 80px;
+}
+
+.gradientText {
+  background: var(--gradient-turqoise-to-dodger);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-family: "Rota";
+  font-size: 18px;
+  max-width: 688px;
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .section_header {
+    margin-top: 24px;
+  }
+
+  .bigTitle {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+}

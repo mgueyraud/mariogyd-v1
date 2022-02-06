@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@styles/partials/Header.module.css";
 import Image from "next/image";
-import { Button, Layout } from "@components";
+import { Button, Container } from "@components";
 import logo from "@assets/img/icons/logo.svg";
 import hamburger from "@assets/img/icons/hamburger.svg";
 import closeIcon from "@assets/img/icons/close-icon.svg";
@@ -12,7 +12,7 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Layout>
+      <Container size="lg">
         <div className={styles.header__content}>
           <Image src={logo} alt="Logo Image" width="54" height="54" />
           {isOpen ? (
@@ -69,7 +69,7 @@ const Header = () => {
             <Image src={hamburger} alt="Hamburger Menu" />
           </div>
         </div>
-      </Layout>
+      </Container>
     </header>
   );
 };
