@@ -10,10 +10,28 @@ const Home: NextPage = () => {
       <Head>
         <title>Mario Gueyraud | Frontend Developer</title>
         <meta
+          property="description"
+          content="Mario Gueyraud is a software engineer who specializes in building deligthful user experiences with high-quality code"
+        />
+        <meta
+          name="image"
+          content="https://mariogyd.com/assets/img/placeholders/the-man.jpg"
+        />
+        <meta
           property="og:title"
           content="Mario Gueyraud | Frontend Developer"
           key="title"
         />
+        <meta
+          property="og:description"
+          content="Mario Gueyraud is a software engineer who specializes in building deligthful user experiences with high-quality code"
+        />
+        <meta
+          name="og:image"
+          content="https://mariogyd.com/assets/img/placeholders/the-man.jpg"
+        />
+        <meta name="og:url" content="https://mariogyd.com/" />
+        <meta name="og:type" content="website" />
       </Head>
       <section className={styles.section_header}>
         <Container size="md">
