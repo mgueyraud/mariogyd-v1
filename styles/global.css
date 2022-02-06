@@ -37,11 +37,12 @@ a[href="#skip-to-content"] {
   font-weight: 500;
   color: var(--color-white);
   text-decoration: none;
+  padding: 10px;
 }
 
 a[href="#skip-to-content"]:focus {
-  left: 20px;
-  top: 20px;
+  left: 10px;
+  top: 10px;
   transform: translateY(0%);
 }
 
