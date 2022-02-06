@@ -11,7 +11,7 @@
         <g id="Home-Desktop" transform="translate(-200.000000, -27.000000)">
             <g id="Logo" transform="translate(200.000000, 27.000000)">
                 <circle id="Oval" stroke="url(#linearGradient-1)" stroke-width="2" cx="27" cy="27" r="26"></circle>
-                <text id="GYD" font-family="Poppins-Bold, Poppins" font-size="18" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                <text id="GYD" font-family="Poppins" font-size="18" font-weight="bold" line-spacing="20" fill="#FFFFFF">
                     <tspan x="8" y="34">GYD</tspan>
                 </text>
             </g>

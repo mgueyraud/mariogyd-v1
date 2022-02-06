@@ -1,0 +1,69 @@
+.singleExperience {
+  display: flex;
+  padding-left: 28px;
+}
+
+.singleExperience__timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.singleExperience__circle {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-bright-turquoise);
+  border-radius: 50%;
+}
+
+.singleExperience__line {
+  width: 1px;
+  background: var(--color-outer-space);
+  flex: 1;
+  margin: 0 auto;
+}
+
+.singleExperience__content {
+  margin-left: 44px;
+}
+
+.singleExperience__title {
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.singleExperience__company {
+  color: var(--color-bright-turquoise);
+}
+
+.singleExperience__date {
+  font-family: "Azeret Mono";
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-gray);
+}
+
+.singleExperience__end {
+  color: var(--color-bright-turquoise);
+}
+
+.singleExperience__description {
+  font-weight: 400;
+  margin-top: 17px;
+  margin-bottom: 56px;
+}
+
+@media screen and (max-width: 768px) {
+  .singleExperience {
+    padding-left: 0;
+  }
+
+  .singleExperience__content {
+    margin-left: 9px;
+  }
+
+  .singleExperience__description {
+    margin-bottom: 40px;
+  }
+}

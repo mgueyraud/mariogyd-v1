@@ -1,0 +1,33 @@
+.gradient__background {
+  width: 424px;
+  background: var(--gradient-turqoise-to-dodger);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gradient__image {
+  width: 92%;
+  transform: rotate(-7deg);
+  filter: grayscale(100%) contrast(1) brightness(90%);
+  transition: filter 0.3s;
+}
+
+.gradient__image:hover,
+.gradient__image:focus {
+  filter: none;
+}
+
+.gradient__image img {
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .gradient__background {
+    width: 100%;
+    max-width: 424px;
+    margin: 0 auto;
+  }
+}
