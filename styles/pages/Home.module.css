@@ -22,6 +22,33 @@
   margin-top: 5px;
 }
 
+.section_about_me {
+  margin-top: 160px;
+}
+
+.section_about_container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section_about_description {
+  max-width: 512px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.section_works {
+  margin-top: 160px;
+}
+
+.section_works__experience {
+  margin-top: 56px;
+}
+
 @media screen and (max-width: 768px) {
   .section_header {
     margin-top: 24px;
@@ -34,5 +61,32 @@
 
   .description {
     font-size: 15px;
+  }
+
+  .section_about_me {
+    margin-top: 80px;
+  }
+
+  .section_about_container {
+    flex-direction: column-reverse;
+  }
+
+  .section_about_description {
+    max-width: unset;
+    width: 100%;
+    padding-right: unset;
+    align-items: flex-start;
+  }
+
+  .section_about_description h1 {
+    margin-top: 30px;
+  }
+
+  .section_about_description p {
+    margin-top: 43px;
+  }
+
+  .section_works {
+    margin-top: 100px;
   }
 }

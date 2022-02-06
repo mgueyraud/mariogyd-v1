@@ -1,0 +1,30 @@
+.title {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.title__container {
+  position: relative;
+}
+
+.title__image {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 30px;
+  }
+
+  .title__image {
+    top: 50%;
+    width: 54px;
+    height: 54px;
+    transform: translateY(-50%);
+  }
+}
