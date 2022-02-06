@@ -1,0 +1,4 @@
+.content-size-lg {
+  max-width: var(--layout-max-content-size);
+  margin: 0 auto;
+}

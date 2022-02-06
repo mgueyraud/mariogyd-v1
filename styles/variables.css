@@ -1,0 +1,28 @@
+:root {
+  /* Colors */
+  --color-bright-turquoise: #05ffd1;
+  --color-dodger-blue: #3b74ff;
+  --color-black-pearl: #04101b;
+  --color-white: #ffffff;
+  --color-firefly: #091a2a;
+  --color-gray: #838383;
+  --color-outer-space: #282f36;
+  --color-soft-peach: #faf6f6;
+
+  /* Gradient */
+  --gradient-turqoise-to-dodger: linear-gradient(
+    to right,
+    var(--color-bright-turquoise),
+    var(--color-dodger-blue)
+  );
+
+  /* Layout */
+  --layout-max-content-size: 1040px;
+  --layout-md-content-size: 952px;
+  --layout-sm-content-size: 600px;
+
+  /* Breakpoints */
+  --breakpoint-sm: 768px;
+  --breakpoint-md: var(--layout-md-content-size);
+  --breakpoint-lg: var(--layout-max-content-size);
+}

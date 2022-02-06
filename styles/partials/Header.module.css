@@ -1,0 +1,129 @@
+.header {
+  width: 100%;
+  margin-top: 27px;
+}
+
+.header__content {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.header__navbar {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.header__navbar ol {
+  display: flex;
+  height: 100%;
+}
+
+.header__navbar ol li {
+  height: 100%;
+  font-family: "Azeret Mono", monospace;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.header__navbar a {
+  padding: 15px;
+  height: 100%;
+  display: inline-block;
+  color: inherit;
+  vertical-align: middle;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.header__navbar a span {
+  color: var(--color-bright-turquoise);
+  margin-right: 8px;
+}
+
+.header__hamburger {
+  display: none;
+}
+
+.header__navbar_close_icon {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    margin-top: 10px;
+  }
+
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header__content > button {
+    display: none;
+  }
+
+  .header__navbar {
+    background: var(--color-black-pearl);
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    height: 100vh;
+    transition: transform 0.3s;
+    min-width: 260px;
+    justify-content: flex-start;
+    padding: 0 24px;
+    z-index: 10;
+    flex-direction: column;
+  }
+
+  .header__navbar ol li {
+    height: unset;
+  }
+
+  .header__navbar.-is-open {
+    transform: translateX(0%);
+  }
+
+  .header__dropshadow {
+    position: fixed;
+    width: calc(100vw - 260px);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 10;
+    filter: blur(5px);
+    background-color: var(--color-black-pearl);
+    opacity: 0.8;
+  }
+
+  .header__navbar ol {
+    flex-direction: column;
+  }
+
+  .header__navbar a {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__navbar_close_icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+
+  .header__navbar a span {
+    margin-bottom: 8px;
+  }
+
+  .header__hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+}

@@ -1,8 +1,17 @@
 import React from "react";
-import buttonStyles from "../../styles/components/button.module.scss";
+import styles from "@styles/components/Button.module.css";
 
-const Button = ({ children }: { children: React.ReactNode }) => {
-  return <button className={buttonStyles.default}>{children}</button>;
+type ButtonProps = {
+  children: React.ReactNode;
+  variant?: "outline" | "default";
+};
+
+const Button: React.FC<ButtonProps> = ({ children, variant = "default" }) => {
+  return (
+    <button className={`${styles.button} ${styles[`button__${variant}`]}`}>
+      {children}
+    </button>
+  );
 };
 
 export default Button;

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Logo</title>
+    <defs>
+        <linearGradient x1="76.750213%" y1="19.5340689%" x2="13.0039725%" y2="71.8859724%" id="linearGradient-1">
+            <stop stop-color="#3B74FF" offset="0%"></stop>
+            <stop stop-color="#05FFD1" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.9">
+        <g id="Home-Desktop" transform="translate(-200.000000, -27.000000)">
+            <g id="Logo" transform="translate(200.000000, 27.000000)">
+                <circle id="Oval" stroke="url(#linearGradient-1)" stroke-width="2" cx="27" cy="27" r="26"></circle>
+                <text id="GYD" font-family="Poppins-Bold, Poppins" font-size="18" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="8" y="34">GYD</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
