@@ -1,0 +1,60 @@
+@import url("./reset.css");
+
+@import url("./variables.css");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: var(--color-black-pearl);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rota";
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-white);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a[href="#skip-to-content"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-100%);
+  font-size: 15px;
+  font-family: "Azeret Mono";
+  font-weight: 500;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+a[href="#skip-to-content"]:focus {
+  left: 20px;
+  top: 20px;
+  transform: translateY(0%);
+}
+
+@media screen and (min-width: 768px) {
+  a:focus,
+  a:active {
+    outline: dotted var(--color-bright-turquoise);
+    transition: all 0.2s;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  body {
+    padding: 0 20px;
+  }
+}

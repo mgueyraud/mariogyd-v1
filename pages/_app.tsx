@@ -1,8 +1,17 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { Header } from "@partials";
+import "@styles/global.css";
+import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <a href="#skip-to-content">Skip to Content</a>
+      <Header />
+      <main id="skip-to-content">
+        <Component {...pageProps} />
+      </main>
+    </>
+  );
 }
 
-export default MyApp
+export default MyApp;

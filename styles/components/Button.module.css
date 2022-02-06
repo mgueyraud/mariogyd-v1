@@ -1,0 +1,26 @@
+.button {
+  outline: none;
+  font-family: "Azeret Mono";
+  font-size: 14px;
+  height: 48px;
+  display: block;
+  background-color: transparent;
+  color: var(--color-bright-turquoise);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button__default {
+  border: none;
+}
+
+.button__outline {
+  border: 1px solid var(--color-bright-turquoise);
+  border-radius: 24px;
+  padding: 0 30px;
+}
+
+.button__outline:hover,
+.button__outline:focus {
+  background-color: rgba(40, 255, 207, 0.08);
+}
