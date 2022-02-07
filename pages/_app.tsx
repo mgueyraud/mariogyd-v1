@@ -14,7 +14,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </main>
       <footer className="footer">
-        <a href="https://www.behance.net/diegocamacho5/moodboards">
+        <a
+          href="https://www.behance.net/diegocamacho5/moodboards"
+          target="_blank"
+          rel="noreferrer"
+        >
           Designed By Diego Camacho&nbsp;
           <Image src={behanceLogo} alt="Behance Logo" />
         </a>
