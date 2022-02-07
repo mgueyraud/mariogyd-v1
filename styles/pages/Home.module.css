@@ -49,6 +49,58 @@
   margin-top: 56px;
 }
 
+.section_projects {
+  margin-top: 120px;
+}
+
+.section__projects_container {
+  margin-top: 80px;
+}
+
+.project:not(:nth-child(1)) {
+  margin-top: 90px;
+}
+
+.section_contact {
+  margin-top: 120px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 410px;
+}
+
+.section_contact h1 {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 70px;
+}
+
+.section_contact p {
+  max-width: 600px;
+}
+
+.section_contact a {
+  display: inline-flex;
+  margin-top: 56px;
+}
+
+.section_contact_bg_img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.section_contact_bg_img > * {
+  width: 205px !important;
+}
+
+@media screen and (max-width: 1040px) {
+  .section_contact_bg_img {
+    right: -20px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .section_header {
     margin-top: 24px;
@@ -88,5 +140,34 @@
 
   .section_works {
     margin-top: 100px;
+  }
+
+  .section_projects {
+    margin-top: 100px;
+  }
+
+  .project:not(:nth-child(1)) {
+    margin-top: 70px;
+  }
+
+  .section_contact {
+    margin-top: 87px;
+    flex-direction: column;
+    height: unset;
+    align-items: unset;
+  }
+
+  .section_contact h1 {
+    font-size: 40px;
+  }
+
+  .section_contact p {
+    max-width: unseet;
+  }
+
+  .section_contact a {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 50px;
   }
 }

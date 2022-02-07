@@ -1,8 +1,20 @@
 import type { NextPage } from "next";
-import { Container, Experience, GradientImage, Title } from "@components";
+import {
+  Project,
+  Container,
+  Experience,
+  GradientImage,
+  Title,
+  Button,
+} from "@components";
 import styles from "@styles/pages/Home.module.css";
 import Head from "next/head";
+import Image from "next/image";
 import aboutMeImage from "@assets/img/placeholders/about-me.jpg";
+import ovalDegrade from "@assets/img/placeholders/oval_degrade.png";
+import ovalDegradeBottom from "@assets/img/placeholders/oval_degrade_bottom.png";
+import { experiences } from "@constants/experiences.constant";
+import { projects } from "@constants/projects.constants";
 
 const Home: NextPage = () => {
   return (
@@ -46,7 +58,7 @@ const Home: NextPage = () => {
           </p>
           <h1 className={styles.bigTitle}>Mario Gueyraud</h1>
           <h1 className={styles.bigTitle}>
-            I&#39;m a<span className={styles.gradientText}>Frontend</span>{" "}
+            I&#39;m a <span className={styles.gradientText}>Frontend</span>{" "}
             Engineer.
           </h1>
           <p className={styles.description}>
@@ -94,44 +106,43 @@ const Home: NextPage = () => {
         <Container size="sm">
           <Title>Where I&#39;ve Worked</Title>
           <div className={styles.section_works__experience}>
-            <Experience
-              works={[
-                {
-                  title: "Frontend Engineer",
-                  company: "Lithium",
-                  start: "July 2021",
-                  end: "Now",
-                  description:
-                    "Outsourced to an US Company called Tonic3, currently working on a product for Avery Dennison clients, with React and Typescript.",
-                },
-                {
-                  title: "Frontend and UI Developer",
-                  company: "Teixidó",
-                  start: "March",
-                  end: "July 2021",
-                  description: `Maintenance and development of CSS Architecture (Sass, Itcss, BEM) of different products.
-
-                  Optimization of different web pages for faster loading experiences.
-                  
-                  UI development of different products such as Newsletters, Insurance and 
-                  
-                  Economist web pages.
-                  
-                  Experience on API implementations with Laravel and Codeigniter.`,
-                },
-                {
-                  title: "Internship",
-                  company: "Teixidó",
-                  start: "December 2017",
-                  end: "February 2018",
-                  description: `Learned the fundamentals of web development.
-
-                Implementation of a CRUD for a Bank web Page.`,
-                },
-              ]}
-            />
+            {experiences.map((work) => {
+              return <Experience key={work.company + work.start} {...work} />;
+            })}
           </div>
         </Container>
+      </section>
+      <section className={styles.section_projects} id="work">
+        <Container size="sm">
+          <Title>Some things I&#39;ve built</Title>
+        </Container>
+        <Container size="lg">
+          <div className={styles.section__projects_container}>
+            {projects.map((project, index) => (
+              <div className={styles.project} key={index + project.title}>
+                <Project is={index % 2 === 0 ? "even" : "odd"} {...project} />
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+      <section className={styles.section_contact} id="contact">
+        <Container size="lg">
+          <h1>Get In Touch</h1>
+          <p>
+            I&#39;m always open to new opportunities. If you have any question
+            or doubt, feel free to drop an email, I&#39;ll get back to you soon!
+          </p>
+          <Button href="mailto:hi@mariogyd.com">Say Hello</Button>
+        </Container>
+        <div className="u-hide-sm">
+          <div className={styles.section_contact_bg_img}>
+            <Image src={ovalDegrade} alt="Oval Degrade" />
+          </div>
+        </div>
+        <div className="u-hide-md_lg">
+          <Image src={ovalDegradeBottom} alt="Oval Degrade Bottom" />
+        </div>
       </section>
     </>
   );

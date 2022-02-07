@@ -60,8 +60,17 @@ const Header = () => {
                 </a>
               </li>
             </ol>
+            <div className="u-hide-md_lg">
+              <Button variant="outline" href="/">
+                Resume
+              </Button>
+            </div>
           </nav>
-          <Button variant="outline">Resume</Button>
+          <div className="u-hide-sm">
+            <Button variant="outline" href="/">
+              Resume
+            </Button>
+          </div>
           <div
             className={styles.header__hamburger}
             onClick={() => setIsOpen(true)}
