@@ -3,11 +3,13 @@
   font-family: "Azeret Mono";
   font-size: 14px;
   height: 48px;
-  display: block;
+  display: flex;
+  align-items: center;
   background-color: transparent;
   color: var(--color-bright-turquoise);
   cursor: pointer;
   transition: all 0.2s;
+  text-decoration: none;
 }
 
 .button__default {

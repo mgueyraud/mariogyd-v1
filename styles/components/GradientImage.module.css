@@ -12,6 +12,7 @@
   transform: rotate(-7deg);
   filter: grayscale(100%) contrast(1) brightness(90%);
   transition: filter 0.3s;
+  height: 360px;
 }
 
 .gradient__image:hover,
@@ -24,10 +25,24 @@
   object-fit: cover;
 }
 
+.gradient__image > * {
+  width: 100%;
+  max-height: 360px;
+  height: 100% !important;
+}
+
 @media screen and (max-width: 768px) {
   .gradient__background {
     width: 100%;
     max-width: 424px;
     margin: 0 auto;
+  }
+
+  .gradient__image {
+    height: 252px;
+  }
+
+  .gradient__image > * {
+    max-height: 252px;
   }
 }

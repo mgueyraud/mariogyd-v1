@@ -20,7 +20,8 @@
       "@partials": ["partials/index.tsx"],
       "@components": ["components/index.tsx"],
       "@hooks/*": ["hooks/*"],
-      "@assets/*": ["assets/*"]
+      "@assets/*": ["assets/*"],
+      "@constants/*": ["helpers/constants/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

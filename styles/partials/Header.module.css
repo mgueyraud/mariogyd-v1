@@ -28,7 +28,7 @@
   line-height: 12px;
 }
 
-.header__navbar a {
+.header__navbar ol li a {
   padding: 15px;
   height: 100%;
   display: inline-block;
@@ -52,6 +52,14 @@
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .header__navbar a:focus,
+  .header__navbar a:active {
+    outline: dotted var(--color-bright-turquoise);
+    transition: all 0.2s;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .header {
     margin-top: 10px;
@@ -60,10 +68,6 @@
   .header__content {
     display: flex;
     justify-content: space-between;
-  }
-
-  .header__content > button {
-    display: none;
   }
 
   .header__navbar {
@@ -79,6 +83,7 @@
     padding: 0 24px;
     z-index: 10;
     flex-direction: column;
+    padding-bottom: 50px;
   }
 
   .header__navbar ol li {
@@ -105,7 +110,7 @@
     flex-direction: column;
   }
 
-  .header__navbar a {
+  .header__navbar ol li a {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
