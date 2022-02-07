@@ -28,7 +28,7 @@ const Project: React.FC<ProjectProps> = ({
         is === "odd" ? styles.project__right_aligned : ""
       }`}
     >
-      <GradientImage src={imageSource} />
+      <GradientImage src={imageSource} alt={title} />
     </div>
   );
 

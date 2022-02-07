@@ -45,7 +45,10 @@ const Home: NextPage = () => {
         <meta name="og:url" content="https://mariogyd.com/" />
         <meta name="og:type" content="website" />
       </Head>
-      <section className={styles.section_header}>
+      <section
+        className={styles.section_header}
+        aria-label="Introduction Section"
+      >
         <Container size="md">
           <p
             style={{
@@ -69,10 +72,14 @@ const Home: NextPage = () => {
           </p>
         </Container>
       </section>
-      <section className={styles.section_about_me} id="about-me">
+      <section
+        className={styles.section_about_me}
+        id="about-me"
+        aria-labelledby="about-me-title"
+      >
         <Container size="lg">
           <div className="u-hide-sm">
-            <Title>About me</Title>
+            <Title id="about-me-title">About me</Title>
           </div>
           <div className={styles.section_about_container}>
             <div className={styles.section_about_description}>
@@ -102,9 +109,13 @@ const Home: NextPage = () => {
           </div>
         </Container>
       </section>
-      <section className={styles.section_works} id="experience">
+      <section
+        className={styles.section_works}
+        id="experience"
+        aria-labelledby="experience-title"
+      >
         <Container size="sm">
-          <Title>Where I&#39;ve Worked</Title>
+          <Title id="experience-title">Where I&#39;ve Worked</Title>
           <div className={styles.section_works__experience}>
             {experiences.map((work) => {
               return <Experience key={work.company + work.start} {...work} />;
@@ -112,9 +123,13 @@ const Home: NextPage = () => {
           </div>
         </Container>
       </section>
-      <section className={styles.section_projects} id="work">
+      <section
+        className={styles.section_projects}
+        id="work"
+        aria-labelledby="work-title"
+      >
         <Container size="sm">
-          <Title>Some things I&#39;ve built</Title>
+          <Title id="work-title">Some things I&#39;ve built</Title>
         </Container>
         <Container size="lg">
           <div className={styles.section__projects_container}>
@@ -126,9 +141,13 @@ const Home: NextPage = () => {
           </div>
         </Container>
       </section>
-      <section className={styles.section_contact} id="contact">
+      <section
+        className={styles.section_contact}
+        id="contact"
+        aria-labelledby="contact-title"
+      >
         <Container size="lg">
-          <h1>Get In Touch</h1>
+          <h1 id="contact-title">Get In Touch</h1>
           <p>
             I&#39;m always open to new opportunities. If you have any question
             or doubt, feel free to drop an email, I&#39;ll get back to you soon!
@@ -137,11 +156,11 @@ const Home: NextPage = () => {
         </Container>
         <div className="u-hide-sm">
           <div className={styles.section_contact_bg_img}>
-            <Image src={ovalDegrade} alt="Oval Degrade" />
+            <Image src={ovalDegrade} alt="" />
           </div>
         </div>
         <div className="u-hide-md_lg">
-          <Image src={ovalDegradeBottom} alt="Oval Degrade Bottom" />
+          <Image src={ovalDegradeBottom} alt="" />
         </div>
       </section>
     </>
