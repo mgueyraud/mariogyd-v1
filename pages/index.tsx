@@ -13,7 +13,7 @@ import Image from "next/image";
 import aboutMeImage from "@assets/img/placeholders/about-me.jpg";
 import ovalDegrade from "@assets/img/placeholders/oval_degrade.png";
 import ovalDegradeBottom from "@assets/img/placeholders/oval_degrade_bottom.png";
-import { experiences } from "@constants/experiences.constant";
+import { experiences } from "@constants/experiences.constants";
 import { projects } from "@constants/projects.constants";
 
 const Home: NextPage = () => {
@@ -75,11 +75,11 @@ const Home: NextPage = () => {
       <section
         className={styles.section_about_me}
         id="about-me"
-        aria-labelledby="about-me-title"
+        aria-label="About me"
       >
         <Container size="lg">
           <div className="u-hide-sm">
-            <Title id="about-me-title">About me</Title>
+            <Title>About me</Title>
           </div>
           <div className={styles.section_about_container}>
             <div className={styles.section_about_description}>
@@ -95,8 +95,32 @@ const Home: NextPage = () => {
                 amazing companies and products.
                 <br />
                 <br /> I&#39;ve worked with different products such as &nbsp;
-                <b>Newsletters , Insurance, Banks</b> and also CMS web pages.
-                Coding with SASS, CSS, Javascript, HTML.
+                <b>
+                  <a
+                    href="https://www.5dias.com.py/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Newsletters
+                  </a>
+                  ,{" "}
+                  <a
+                    href="https://www.consolidada.com.py/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Insurance
+                  </a>
+                  ,{" "}
+                  <a
+                    href="https://www.visionbanco.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    Banks
+                  </a>
+                </b>{" "}
+                and also CMS web pages. Coding with SASS, CSS, Javascript, HTML.
                 <br />
                 <br /> Nowadays, my main languages are javascript, css and html,
                 looking forward to expand my knowledge in the backend and mobile

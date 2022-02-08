@@ -1,30 +1,30 @@
 import spotifu from '@assets/img/placeholders/spotifu.jpeg';
-import tesla from '@assets/img/placeholders/tesla.png';
+import blockMaster from '@assets/img/placeholders/block-master.png';
 import calculator from '@assets/img/placeholders/calculator.jpeg';
 
 
 export const projects = [
     {
         number: "01",
-        title: "Spotifu - Spotify Clone",
-        languages: ["JavaScript", "HTML", "CSS"],
-        description: "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks.",
-        cta: "https://github.com/mgueyraud/Spotifu-SpotifyClone",
-        imageSource: spotifu,
+        title: "Block Master",
+        languages: ["Styled Components", "React", "Javascript"],
+        description: "A block buster website (like Netflix) where it fetches movies from tmdb(The movie DB) so the user can see and select one movie to see more details about that movie.",
+        cta: "https://github.com/mgueyraud/block-master/",
+        imageSource: blockMaster,
     },
     {
         number: "02",
-        title: "Tesla l Tesla Clone",
-        languages: ["JavaScript", "HTML", "CSS"],
-        description: "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks.",
-        cta: "https://github.com/mgueyraud/tesla-clone",
-        imageSource: tesla,
+        title: "Spotifu - Spotify Clone",
+        languages: ["JavaScript", "SASS", "React", "HTML"],
+        description: "A clone of the Spotify web page, where you can navigate into an album, and also hear music with my own library to play music in the DOM",
+        cta: "https://github.com/mgueyraud/Spotifu-SpotifyClone",
+        imageSource: spotifu,
     },
     {
         number: "03",
         title: "Calculator App",
         languages: ["Typescript", "React Native"],
-        description: "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks.",
+        description: "A mobile app (Clone of the calculator of iOS), where you can do calculations built with React Native and Typescript",
         cta: "https://github.com/mgueyraud/calculator_iOS_RN",
         imageSource: calculator,
     },

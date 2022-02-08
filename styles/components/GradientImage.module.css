@@ -9,14 +9,24 @@
 
 .gradient__image {
   width: 92%;
-  transform: rotate(-7deg);
-  filter: grayscale(100%) contrast(1) brightness(90%);
-  transition: filter 0.3s;
   height: 360px;
 }
 
-.gradient__image:hover,
-.gradient__image:focus {
+.gradient__image_r_left {
+  transform: rotate(-7deg);
+}
+
+.gradient__image_r_right {
+  transform: rotate(7deg);
+}
+
+.gradient__image img {
+  transition: filter 0.3s;
+  filter: grayscale(100%) contrast(1) brightness(90%);
+}
+
+.gradient__image:hover img,
+.gradient__image:focus img {
   filter: none;
 }
 
@@ -44,5 +54,9 @@
 
   .gradient__image > * {
     max-height: 252px;
+  }
+
+  .gradient__image_r_right {
+    transform: rotate(-7deg);
   }
 }
