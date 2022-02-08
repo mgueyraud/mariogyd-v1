@@ -25,7 +25,8 @@ class MyDocument extends Document {
               crossOrigin="true"
             />
           ))}
-          <link href="./assets/css/rota.css" rel="stylesheet" />
+          <link href="./assets/css/rota.css" rel="preload" as="stylesheet" />
+          <link rel="shortcut icon" href="/static/favicon.svg" />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
