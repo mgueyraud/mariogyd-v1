@@ -41,6 +41,31 @@
   flex-direction: column;
 }
 
+.section_about_description p a {
+  color: var(--color-bright-turquoise);
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+}
+
+.section_about_description p a::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--color-bright-turquoise);
+  transition: width 0.4s;
+}
+
+.section_about_description p a:focus::after,
+.section_about_description p a:active::after,
+.section_about_description p a:hover::after {
+  width: 100%;
+}
+
 .section_works {
   margin-top: 160px;
 }

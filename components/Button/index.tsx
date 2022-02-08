@@ -16,14 +16,16 @@ function isPropsForAnchorElement(
 }
 
 const Button = (props: ButtonLinkProps | ButtonNormalProps) => {
-  const { variant = "outline" } = props;
-  const className = `${styles.button} ${styles[`button__${variant}`]}`;
+  const { variant = "outline", className: customClassName } = props;
+  const className = `${styles.button} ${styles[`button__${variant}`]} ${
+    customClassName ?? ""
+  }`;
 
   if (isPropsForAnchorElement(props)) {
-    return <a className={className} {...props} />;
+    return <a {...props} className={className} />;
   }
 
-  return <button className={className} {...props} />;
+  return <button {...props} className={className} />;
 };
 
 export default Button;

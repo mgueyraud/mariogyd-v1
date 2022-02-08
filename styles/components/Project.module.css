@@ -2,14 +2,30 @@
   display: flex;
 }
 
-.project h1 {
+.project h1 > a {
   font-family: "Poppins";
   font-weight: 600;
   font-size: 20px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.project h1 > a:focus,
+.project h1 > a:active {
+  outline: dotted var(--color-bright-turquoise);
+  transition: all 0.2s;
 }
 
 .project__image {
   flex-basis: 423px;
+}
+
+.project__image a {
+  outline: none;
+}
+
+.project__image a:focus img {
+  filter: none;
 }
 
 .project__right_aligned {
@@ -61,7 +77,7 @@
   margin-top: 17px;
 }
 
-.project a {
+.project__cta {
   margin-top: 27px;
   display: inline-flex;
 }
@@ -99,7 +115,7 @@
     margin-left: unset;
   }
 
-  .project a {
+  .project__cta {
     width: 100%;
     justify-content: center;
   }

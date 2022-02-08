@@ -28,7 +28,13 @@ const Project: React.FC<ProjectProps> = ({
         is === "odd" ? styles.project__right_aligned : ""
       }`}
     >
-      <GradientImage src={imageSource} alt={title} />
+      <a href={cta} target="_blank" rel="noreferrer">
+        <GradientImage
+          src={imageSource}
+          alt={title}
+          rotate={is == "even" ? "left" : "right"}
+        />
+      </a>
     </div>
   );
 
@@ -40,12 +46,21 @@ const Project: React.FC<ProjectProps> = ({
     >
       <div className={styles.project__number}>{number}</div>
       <p className={styles.project__featured}>Featured Project</p>
-      <h1>{title}</h1>
+      <h1>
+        <a href={cta} target="_blank" rel="noreferrer">
+          {title}
+        </a>
+      </h1>
       <p className={styles.project__languages}>
         Languages: <span>{languages.join(", ")}</span>
       </p>
       <p className={styles.project__description}>{description}</p>
-      <Button href={cta} target="_blank">
+      <Button
+        className={styles.project__cta}
+        href={cta}
+        target="_blank"
+        rel="noreferrer"
+      >
         See Project
       </Button>
     </div>
