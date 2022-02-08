@@ -1,5 +1,5 @@
 // pages/_document.js
-import { fonts } from "@constants/fonts.constants";
+import { fonts } from "utils/constants/fonts.constants";
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
 class MyDocument extends Document {
@@ -26,6 +26,19 @@ class MyDocument extends Document {
             />
           ))}
           <link href="./assets/css/rota.css" rel="stylesheet" />
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');`,
+            }}
+          ></script>
         </Head>
         <body>
           <Main />

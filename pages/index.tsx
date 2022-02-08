@@ -13,8 +13,8 @@ import Image from "next/image";
 import aboutMeImage from "@assets/img/placeholders/about-me.jpg";
 import ovalDegrade from "@assets/img/placeholders/oval_degrade.png";
 import ovalDegradeBottom from "@assets/img/placeholders/oval_degrade_bottom.png";
-import { experiences } from "@constants/experiences.constants";
-import { projects } from "@constants/projects.constants";
+import { experiences } from "utils/constants/experiences.constants";
+import { projects } from "utils/constants/projects.constants";
 
 const Home: NextPage = () => {
   return (

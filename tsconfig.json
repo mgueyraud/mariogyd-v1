@@ -21,7 +21,8 @@
       "@components": ["components/index.tsx"],
       "@hooks/*": ["hooks/*"],
       "@assets/*": ["assets/*"],
-      "@constants/*": ["helpers/constants/*"]
+      "@constants/*": ["utils/constants/*"],
+      "@helpers/*": ["utils/helpers/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
