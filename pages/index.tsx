@@ -88,7 +88,7 @@ const Home: NextPage = () => {
               </div>
               <p>
                 Hello! My name is Mario and I enjoy creating things with code. I
-                started coding at 13, my interested started because I wanted to
+                started coding at 13, my interest started because I wanted to
                 know how mobile applications were built.
                 <br />
                 <br /> Until today I&#39;ve had the privilege to work at such
@@ -109,7 +109,7 @@ const Home: NextPage = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Insurance
+                    Insurance Companies
                   </a>
                   ,{" "}
                   <a
@@ -122,9 +122,9 @@ const Home: NextPage = () => {
                 </b>{" "}
                 and also CMS web pages. Coding with SASS, CSS, Javascript, HTML.
                 <br />
-                <br /> Nowadays, my main languages are javascript, css and html,
-                looking forward to expand my knowledge in the backend and mobile
-                development.
+                <br /> Nowadays, my main languages are typescript, javascript,
+                css and html, looking forward to expand my knowledge in the
+                backend, mobile and blockchain development.
               </p>
             </div>
             <div>

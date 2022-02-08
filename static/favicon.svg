@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Favicon 3</title>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#05FFD1" offset="0%"></stop>
+            <stop stop-color="#3B74FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Favicon-3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo" transform="translate(5.000000, 5.000000)">
+            <circle id="Oval" fill="url(#linearGradient-1)" opacity="0.9" cx="27" cy="27" r="27"></circle>
+            <text id="GYD" font-family="Poppins-Bold, Poppins" font-size="18" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                <tspan x="8" y="34">GYD</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

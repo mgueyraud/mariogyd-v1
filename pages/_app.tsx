@@ -2,6 +2,7 @@ import { Header } from "@partials";
 import "@styles/global.css";
 import Image from "next/image";
 import behanceLogo from "@assets/img/icons/behance-logo.svg";
+import githubLogo from "@assets/img/icons/github.svg";
 
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
@@ -29,6 +30,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </main>
       <footer className="footer">
+        <a href="https://github.com/mgueyraud" target="_blank" rel="noreferrer">
+          Built By Mario Gueyraud&nbsp;
+          <Image src={githubLogo} alt="Behance Logo" />
+        </a>
         <a
           href="https://www.behance.net/diegocamacho5/moodboards"
           target="_blank"
