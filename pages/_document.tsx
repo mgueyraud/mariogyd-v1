@@ -25,7 +25,18 @@ class MyDocument extends Document {
               crossOrigin="true"
             />
           ))}
-          <link href="./assets/css/rota.css" rel="preload" as="stylesheet" />
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `</style>
+                  <link
+                  href="./assets/css/rota.css"
+                  rel="preload"
+                  as="style"
+                  onload="this.rel='stylesheet'"
+                />
+              <style>`,
+            }}
+          ></style>
           <link rel="shortcut icon" href="/static/favicon.svg" />
           <script
             async
