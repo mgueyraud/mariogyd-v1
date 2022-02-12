@@ -25,14 +25,14 @@ export const Default = Template.bind({});
 
 Default.args = {
   src: aboutMeImage,
-  label: "About me",
+  alt: "About me",
 };
 
 export const LeftRotated = Template.bind({});
 
 LeftRotated.args = {
   src: aboutMeImage,
-  label: "About me",
+  alt: "About me",
   rotate: "left",
 };
 
@@ -40,6 +40,6 @@ export const RightRotated = Template.bind({});
 
 RightRotated.args = {
   src: aboutMeImage,
-  label: "About me",
+  alt: "About me",
   rotate: "right",
 };
