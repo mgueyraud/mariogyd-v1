@@ -10,9 +10,11 @@
     "build-storybook": "build-storybook -c .storybook -o public/storybook"
   },
   "dependencies": {
+    "framer-motion": "^6.2.6",
     "next": "12.0.9",
     "react": "17.0.2",
     "react-dom": "17.0.2",
+    "react-intersection-observer": "^8.33.1",
     "sass": "^1.49.4"
   },
   "devDependencies": {
