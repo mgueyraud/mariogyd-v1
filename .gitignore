@@ -38,4 +38,4 @@ yarn-error.log*
 
 #storybook
 public/storybook
-/storybook-static
+storybook-static
