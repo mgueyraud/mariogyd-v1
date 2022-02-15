@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="image"
-          content="https://mariogyd.com/assets/img/placeholders/the-man.jpg"
+          content="https://mariogyd.com/assets/img/placeholders/dope-website.png"
         />
         <meta
           property="og:title"
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
         />
         <meta
           name="og:image"
-          content="https://mariogyd.com/assets/img/placeholders/the-man.jpg"
+          content="https://mariogyd.com/assets/img/placeholders/dope-website.png"
         />
         <meta name="og:url" content="https://mariogyd.com/" />
         <meta name="og:type" content="website" />
