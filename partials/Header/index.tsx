@@ -6,9 +6,19 @@ import logo from "@assets/img/icons/logo.svg";
 import hamburger from "@assets/img/icons/hamburger.svg";
 import closeIcon from "@assets/img/icons/close-icon.svg";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
+
+  const handleClickAnchor = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+
+    router.push((e.currentTarget as HTMLAnchorElement).href);
+
+    setIsOpen(false);
+  };
 
   return (
     <header className={styles.header}>
@@ -35,27 +45,27 @@ const Header = () => {
             </div>
             <ol>
               <li>
-                <a href="#about-me">
+                <a href="#about-me" onClick={handleClickAnchor}>
                   <span>01.</span>About me
                 </a>
               </li>
               <li>
-                <a href="#experience">
+                <a href="#experience" onClick={handleClickAnchor}>
                   <span>02.</span>Experience
                 </a>
               </li>
               <li>
-                <a href="#work">
+                <a href="#work" onClick={handleClickAnchor}>
                   <span>03.</span>Work
                 </a>
               </li>
               <li>
-                <a href="#articles">
+                <a href="#articles" onClick={handleClickAnchor}>
                   <span>04.</span>Articles
                 </a>
               </li>
               <li>
-                <a href="#contact">
+                <a href="#contact" onClick={handleClickAnchor}>
                   <span>05.</span>Contact
                 </a>
               </li>
