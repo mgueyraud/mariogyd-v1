@@ -1,4 +1,4 @@
-# Mario Gueyraud home page
+# Mario Gueyraud Home Page
 
 [https://www.mariogyd.com/](https://www.mariogyd.com/)
 
