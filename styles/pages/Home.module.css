@@ -146,6 +146,7 @@
 
   .section_about_container {
     flex-direction: column-reverse;
+    margin-bottom: 47px;
   }
 
   .section_about_description {
