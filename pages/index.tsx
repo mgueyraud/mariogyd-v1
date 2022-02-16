@@ -6,6 +6,7 @@ import {
   GradientImage,
   Title,
   Button,
+  SocialIcon,
 } from "@components";
 import styles from "@styles/pages/Home.module.css";
 import Head from "next/head";
@@ -131,6 +132,14 @@ const Home: NextPage = () => {
               <GradientImage src={aboutMeImage} alt="About Me Image" />
             </div>
           </div>
+          <SocialIcon type="twitter" href="https://twitter.com/mariogyd" />
+          &nbsp;&nbsp;&nbsp;
+          <SocialIcon
+            type="linkedin"
+            href="https://www.linkedin.com/in/mariogyd/"
+          />
+          &nbsp;&nbsp;&nbsp;
+          <SocialIcon type="github" href="https://github.com/mgueyraud" />
         </Container>
       </section>
       <section

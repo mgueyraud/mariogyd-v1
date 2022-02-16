@@ -1,0 +1,11 @@
+.socialIcon svg {
+  color: var(--color-firefly);
+  transition: color 0.4s;
+}
+
+.socialIcon:focus svg,
+.socialIcon:hover svg {
+  outline: none;
+  border: none;
+  color: var(--color-bright-turquoise);
+}
