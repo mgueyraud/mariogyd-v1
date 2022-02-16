@@ -30,7 +30,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </main>
       <footer className="footer">
-        <a href="https://github.com/mgueyraud" target="_blank" rel="noreferrer">
+        <a
+          href="https://github.com/mgueyraud/mariogyd"
+          target="_blank"
+          rel="noreferrer"
+        >
           Built By Mario Gueyraud&nbsp;
           <Image src={githubLogo} alt="Behance Logo" />
         </a>
