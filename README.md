@@ -28,7 +28,7 @@ $PROJECT_ROOT
 ├── styles
 │   # Folder for utilities such as functions, constants, helpers, etc
 ├── utils
-│   # Static files for images and 3d model file
+│   # Static files for images, css files, fonts, etc
 └── public
 ```
 ## Components
