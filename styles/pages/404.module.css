@@ -1,0 +1,29 @@
+.notFoundContainer {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.notFoundContainer h1 {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 70px;
+  line-height: 80px;
+}
+
+.notFoundContainer h2 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.notFoundContainer p {
+  max-width: 300px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.notFoundContainer button {
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}

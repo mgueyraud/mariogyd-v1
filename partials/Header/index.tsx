@@ -20,11 +20,27 @@ const Header = () => {
     setIsOpen(false);
   };
 
+  const handleRightClickLogo = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    window.location.href = "/storybook/index.html";
+  };
+
+  const handleClickLogo = (e: React.SyntheticEvent) => {
+    e.preventDefault();
+    router.push("/");
+  };
+
   return (
     <header className={styles.header}>
       <Container size="lg">
         <div className={styles.header__content}>
-          <Image src={logo} alt="Logo Image" width="54" height="54" />
+          <button
+            className={styles.header__logo}
+            onClick={handleClickLogo}
+            onContextMenu={handleRightClickLogo}
+          >
+            <Image src={logo} alt="Logo Image" width="54" height="54" />
+          </button>
           {isOpen ? (
             <div
               className={styles.header__dropshadow}
