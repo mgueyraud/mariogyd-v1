@@ -15,7 +15,10 @@ const Header = () => {
   const handleClickAnchor = (e: React.SyntheticEvent) => {
     e.preventDefault();
 
-    router.push((e.currentTarget as HTMLAnchorElement).href);
+    const redirectAnchor =
+      window.location.origin + (e.currentTarget as HTMLAnchorElement).hash;
+
+    router.push(redirectAnchor);
 
     setIsOpen(false);
   };
