@@ -30,7 +30,10 @@ const Experience: React.FC<ExperienceProps> = ({
         <p className={styles.singleExperience__date}>
           {start} <span className={styles.singleExperience__end}>- {end}</span>
         </p>
-        <p className={styles.singleExperience__description}>{description}</p>
+        <p
+          className={styles.singleExperience__description}
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
       </div>
     </div>
   );
