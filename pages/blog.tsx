@@ -3,8 +3,12 @@ import Head from "next/head";
 
 import styles from "@styles/pages/Posts.module.css";
 import { Button, Container, Loading, Post, Title } from "@components";
+import { getAllPosts } from "@api";
+import { PostMeta } from "@interface/Post";
 
-const Home: NextPage = () => {
+type BlogProps = { posts: PostMeta[] };
+
+const Blog: NextPage<BlogProps> = ({ posts }) => {
   return (
     <>
       <Head>
@@ -39,80 +43,32 @@ const Home: NextPage = () => {
           <Title>Learn development with great articles.</Title>
           <div className={styles.section_posts_container}>
             <div>
-              <Post
-                title="Currently the Optimization of a website how it impacts SEO?"
-                date="February 01, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
-              <Post
-                title="How much does a WordPress website cost?"
-                date="April 23, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
-              <Post
-                title="Currently the Optimization of a website how it impacts SEO?"
-                date="February 01, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
-              <Post
-                title="How much does a WordPress website cost?"
-                date="April 23, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
-              <Post
-                title="Currently the Optimization of a website how it impacts SEO?"
-                date="February 01, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
-              <Post
-                title="How much does a WordPress website cost?"
-                date="April 23, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
+              {posts.map((post, index) => {
+                if (index % 2 !== 0) {
+                  return (
+                    <Post
+                      title={post.title}
+                      date={new Date(post.date).toLocaleDateString()}
+                      description={post.excerpt}
+                      slug={post.slug}
+                    />
+                  );
+                }
+              })}
             </div>
             <div>
-              <Post
-                title="What Does the Development of Medical Mobile Software Consist of"
-                date="February 01, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
-              <Post
-                title="The best Web Devleoper - Questions & Answers"
-                date="February 01, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
-              <Post
-                title="What Does the Development of Medical Mobile Software Consist of"
-                date="February 01, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
-              <Post
-                title="The best Web Devleoper - Questions & Answers"
-                date="February 01, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
-              <Post
-                title="What Does the Development of Medical Mobile Software Consist of"
-                date="February 01, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
-              <Post
-                title="The best Web Devleoper - Questions & Answers"
-                date="February 01, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
+              {posts.map((post, index) => {
+                if (index % 2 === 0) {
+                  return (
+                    <Post
+                      title={post.title}
+                      date={new Date(post.date).toLocaleDateString()}
+                      description={post.excerpt}
+                      slug={post.slug}
+                    />
+                  );
+                }
+              })}
             </div>
           </div>
           <div
@@ -131,4 +87,14 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export async function getStaticProps() {
+  const posts = getAllPosts()
+    .slice(0, 9)
+    .map((post) => post.meta);
+
+  return {
+    props: { posts },
+  };
+}
+
+export default Blog;

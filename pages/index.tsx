@@ -18,8 +18,12 @@ import ovalDegradeBottom from "@assets/img/placeholders/oval_degrade_bottom.png"
 import { experiences } from "utils/constants/experiences.constants";
 import { projects } from "utils/constants/projects.constants";
 import { useRouter } from "next/router";
+import { getAllPosts } from "@api*";
+import { PostMeta } from "@interface/Post";
 
-const Home: NextPage = () => {
+type HomeProps = { posts: PostMeta[] };
+
+const Home: NextPage<HomeProps> = ({ posts }) => {
   const router = useRouter();
 
   return (
@@ -204,32 +208,32 @@ const Home: NextPage = () => {
           </div>
           <div className={styles.section_articles_container}>
             <div>
-              <Post
-                title="Currently the Optimization of a website how it impacts SEO?"
-                date="February 01, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
-              <Post
-                title="How much does a WordPress website cost?"
-                date="April 23, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
+              {posts.map((post, index) => {
+                if (index % 2 !== 0) {
+                  return (
+                    <Post
+                      title={post.title}
+                      date={new Date(post.date).toLocaleDateString()}
+                      description={post.excerpt}
+                      slug={post.slug}
+                    />
+                  );
+                }
+              })}
             </div>
             <div>
-              <Post
-                title="What Does the Development of Medical Mobile Software Consist of"
-                date="February 01, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
-              <Post
-                title="The best Web Devleoper - Questions & Answers"
-                date="February 01, 2021"
-                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
-                link="https://facebook.com"
-              />
+              {posts.map((post, index) => {
+                if (index % 2 == 0) {
+                  return (
+                    <Post
+                      title={post.title}
+                      date={new Date(post.date).toLocaleDateString()}
+                      description={post.excerpt}
+                      slug={post.slug}
+                    />
+                  );
+                }
+              })}
             </div>
           </div>
           <div className={styles.section_articles_show_more}>
@@ -265,5 +269,15 @@ const Home: NextPage = () => {
     </>
   );
 };
+
+export async function getStaticProps() {
+  const posts = getAllPosts()
+    .slice(0, 3)
+    .map((post) => post.meta);
+
+  return {
+    props: { posts },
+  };
+}
 
 export default Home;

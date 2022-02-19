@@ -1,0 +1,150 @@
+.post p,
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6,
+.post pre,
+.post code,
+.post ul,
+.post blockquote {
+  max-width: 864px;
+  margin: 0 auto;
+}
+
+.post h1 a,
+.post h2 a,
+.post h3 a,
+.post h4 a,
+.post h5 a,
+.post h6 a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.post_container {
+  margin-top: 60px;
+}
+
+.post_back {
+  font-family: "Azeret Mono";
+  font-size: 14px;
+  text-decoration: none;
+  padding: 10px;
+  color: var(--color-bright-turquoise);
+}
+
+.post_back:focus {
+  outline: dashed var(--color-bright-turquoise);
+}
+
+.post {
+  margin-top: 33px;
+}
+
+.post h1 {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+  margin-top: 44px;
+  margin-bottom: 17px;
+}
+
+.post h2 {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 30px;
+  margin-top: 36px;
+  margin-bottom: 14px;
+}
+
+.post h3 {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
+  margin-top: 30px;
+  margin-bottom: 14px;
+}
+
+.post p {
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+.post p a,
+.post ul a {
+  color: var(--color-bright-turquoise);
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  outline: none;
+}
+
+.post p a::after,
+.post ul a::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background: var(--color-bright-turquoise);
+  transition: width 0.4s;
+}
+
+.post p a:focus::after,
+.post p a:active::after,
+.post p a:hover::after,
+.post ul a:focus::after,
+.post ul a:active::after,
+.post ul a:hover::after {
+  width: 100%;
+}
+
+.post pre {
+  font-family: "Azeret Mono";
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.post ul {
+  margin-bottom: 20px;
+}
+
+.post ul li {
+  font-weight: 500;
+}
+
+.post ul li::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: var(--color-bright-turquoise);
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.post .post_title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+.post .post_date {
+  font-family: "Azeret Mono";
+  font-weight: 500;
+  font-size: 12px;
+  color: var(--color-bright-turquoise);
+  margin-bottom: 17px;
+  margin-top: 0;
+  line-height: 1;
+}
