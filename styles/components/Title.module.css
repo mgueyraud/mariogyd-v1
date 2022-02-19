@@ -19,6 +19,7 @@
 @media screen and (max-width: 768px) {
   .title {
     font-size: 30px;
+    line-height: 35px;
   }
 
   .title__image {

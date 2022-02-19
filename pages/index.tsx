@@ -7,6 +7,7 @@ import {
   Title,
   Button,
   SocialIcon,
+  Post,
 } from "@components";
 import styles from "@styles/pages/Home.module.css";
 import Head from "next/head";
@@ -16,8 +17,11 @@ import ovalDegrade from "@assets/img/placeholders/oval_degrade.png";
 import ovalDegradeBottom from "@assets/img/placeholders/oval_degrade_bottom.png";
 import { experiences } from "utils/constants/experiences.constants";
 import { projects } from "utils/constants/projects.constants";
+import { useRouter } from "next/router";
 
 const Home: NextPage = () => {
+  const router = useRouter();
+
   return (
     <>
       <Head>
@@ -46,6 +50,9 @@ const Home: NextPage = () => {
         <meta name="og:url" content="https://mariogyd.com/" />
         <meta name="og:type" content="website" />
       </Head>
+
+      {/* Intro section */}
+
       <section
         className={styles.section_header}
         aria-label="Introduction Section"
@@ -73,6 +80,9 @@ const Home: NextPage = () => {
           </p>
         </Container>
       </section>
+
+      {/* About me section */}
+
       <section
         className={styles.section_about_me}
         id="about-me"
@@ -142,6 +152,9 @@ const Home: NextPage = () => {
           <SocialIcon type="github" href="https://github.com/mgueyraud" />
         </Container>
       </section>
+
+      {/* Experience section */}
+
       <section
         className={styles.section_works}
         id="experience"
@@ -156,6 +169,9 @@ const Home: NextPage = () => {
           </div>
         </Container>
       </section>
+
+      {/* Projects section */}
+
       <section
         className={styles.section_projects}
         id="work"
@@ -174,6 +190,56 @@ const Home: NextPage = () => {
           </div>
         </Container>
       </section>
+
+      {/* Posts section */}
+
+      <section
+        id="articles"
+        aria-labelledby="articles-title"
+        className={styles.section_articles}
+      >
+        <Container size="lg">
+          <div className={styles.section_articles_title}>
+            <Title id="work-title">Check out some articles I wrote</Title>
+          </div>
+          <div className={styles.section_articles_container}>
+            <div>
+              <Post
+                title="Currently the Optimization of a website how it impacts SEO?"
+                date="February 01, 2021"
+                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
+                link="https://facebook.com"
+              />
+              <Post
+                title="How much does a WordPress website cost?"
+                date="April 23, 2021"
+                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
+                link="https://facebook.com"
+              />
+            </div>
+            <div>
+              <Post
+                title="What Does the Development of Medical Mobile Software Consist of"
+                date="February 01, 2021"
+                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
+                link="https://facebook.com"
+              />
+              <Post
+                title="The best Web Devleoper - Questions & Answers"
+                date="February 01, 2021"
+                description="The need for a telehealth solution has created a huge market for medical mobile software. Understanding understanding what types of options are available is just the start of the development"
+                link="https://facebook.com"
+              />
+            </div>
+          </div>
+          <div className={styles.section_articles_show_more}>
+            <Button onClick={() => router.push("/blog")}>Show more</Button>
+          </div>
+        </Container>
+      </section>
+
+      {/* Contact section */}
+
       <section
         className={styles.section_contact}
         id="contact"

@@ -4,4 +4,6 @@ export { default as Title } from "./Title";
 export { default as GradientImage } from "./GradientImage";
 export { default as Experience } from "./Experience";
 export { default as Project } from "./Project";
+export { default as Post } from "./Post";
+export { default as Loading } from "./Loading";
 export { default as SocialIcon } from "./SocialIcon";

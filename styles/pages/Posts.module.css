@@ -1,0 +1,41 @@
+.section_posts {
+  margin-top: 85px;
+}
+
+.section_posts_container {
+  display: flex;
+  gap: 16px;
+  margin-top: 60px;
+}
+
+.section_posts_container > * {
+  flex: 512px 1 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.load_more {
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .section_posts {
+    margin-top: 50px;
+  }
+
+  .section_posts_container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section_posts_container > * {
+    flex: 1;
+    gap: 10px;
+  }
+
+  .load_more {
+    width: 100%;
+    justify-content: center;
+  }
+}

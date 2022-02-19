@@ -1,3 +1,5 @@
+/* Intro section */
+
 .section_header {
   margin-top: 120px;
 }
@@ -21,6 +23,8 @@
   max-width: 688px;
   margin-top: 5px;
 }
+
+/* About me section */
 
 .section_about_me {
   margin-top: 160px;
@@ -66,6 +70,8 @@
   width: 100%;
 }
 
+/* Works section */
+
 .section_works {
   margin-top: 160px;
 }
@@ -73,6 +79,8 @@
 .section_works__experience {
   margin-top: 56px;
 }
+
+/* Project section */
 
 .section_projects {
   margin-top: 120px;
@@ -85,6 +93,42 @@
 .project:not(:nth-child(1)) {
   margin-top: 90px;
 }
+
+/* Articles section */
+
+.section_articles {
+  margin-top: 115px;
+}
+
+.section_articles_title {
+  display: flex;
+}
+
+.section_articles_title > * {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.section_articles_container {
+  display: flex;
+  gap: 16px;
+  margin-top: 60px;
+}
+
+.section_articles_container > * {
+  flex: 512px 1 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section_articles_show_more {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* Contact section */
 
 .section_contact {
   margin-top: 120px;
@@ -119,6 +163,8 @@
 .section_contact_bg_img > * {
   width: 205px !important;
 }
+
+/* Responsive */
 
 @media screen and (max-width: 1040px) {
   .section_contact_bg_img {
@@ -174,6 +220,27 @@
 
   .project:not(:nth-child(1)) {
     margin-top: 70px;
+  }
+
+  .section_articles {
+    margin-top: 100px;
+  }
+
+  .section_articles_container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section_articles_container > * {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section_articles_show_more button {
+    width: 100%;
+    justify-content: center;
   }
 
   .section_contact {
