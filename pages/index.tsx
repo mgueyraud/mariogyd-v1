@@ -53,6 +53,8 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
         />
         <meta name="og:url" content="https://mariogyd.com/" />
         <meta name="og:type" content="website" />
+        <meta name="twitter:site" content="@mariogyd" />
+        <meta name="twitter:creator" content="@mariogyd" />
       </Head>
 
       {/* Intro section */}

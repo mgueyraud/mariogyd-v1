@@ -76,7 +76,6 @@ const BlogPost: NextPage<BlogPostProps> = ({ post }) => {
         />
         <meta name="og:url" content="https://mariogyd.com/" />
         <meta name="og:type" content="website" />
-        <meta name="twitter:card" content={post.meta.excerpt} />
         <meta name="twitter:site" content="@mariogyd" />
         <meta name="twitter:creator" content="@mariogyd" />
       </Head>
