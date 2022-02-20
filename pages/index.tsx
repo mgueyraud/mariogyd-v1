@@ -209,7 +209,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           <div className={styles.section_articles_container}>
             <div>
               {posts.map((post, index) => {
-                if (index % 2 !== 0) {
+                if ((index + 1) % 2 !== 0) {
                   return (
                     <Post
                       title={post.title}
@@ -223,7 +223,7 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
             </div>
             <div>
               {posts.map((post, index) => {
-                if (index % 2 == 0) {
+                if ((index + 1) % 2 == 0) {
                   return (
                     <Post
                       title={post.title}

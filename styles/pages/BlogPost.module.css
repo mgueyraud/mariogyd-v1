@@ -5,8 +5,6 @@
 .post h4,
 .post h5,
 .post h6,
-.post pre,
-.post code,
 .post ul,
 .post blockquote {
   max-width: 864px;
@@ -33,6 +31,12 @@
   text-decoration: none;
   padding: 10px;
   color: var(--color-bright-turquoise);
+  display: inline-flex;
+  align-items: center;
+}
+
+.post_back svg {
+  margin-right: 10px;
 }
 
 .post_back:focus {
@@ -136,7 +140,7 @@
   font-family: "Poppins";
   font-weight: bold;
   font-size: 40px;
-  line-height: 48px;
+  line-height: 50px;
 }
 
 .post .post_date {
@@ -146,5 +150,71 @@
   color: var(--color-bright-turquoise);
   margin-bottom: 17px;
   margin-top: 0;
-  line-height: 1;
+  line-height: 1.75;
+}
+
+.tweet {
+  display: inline-flex;
+  align-items: center;
+  font-family: "Azeret Mono";
+  font-size: 14px;
+  color: var(--color-bright-turquoise);
+  text-decoration: none;
+  margin-top: 60px;
+}
+
+.tweet svg {
+  color: var(--color-firefly);
+  margin-right: 10px;
+}
+
+.tweet:focus {
+  outline: dashed var(--color-bright-turquoise);
+}
+
+.divider {
+  background-color: var(--color-outer-space);
+  height: 1px;
+  width: 100%;
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .post_container {
+    margin-top: 50px;
+  }
+
+  .post {
+    margin-top: 15px;
+  }
+
+  .post .post_title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+
+  .post h1 {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .post h2 {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .post h3 {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .tweet {
+    margin-top: 50px;
+  }
 }

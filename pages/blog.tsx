@@ -36,6 +36,12 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
         />
         <meta name="og:url" content="https://mariogyd.com/" />
         <meta name="og:type" content="website" />
+        <meta
+          name="twitter:card"
+          content="Mario Gueyraud is a software engineer who specializes in building deligthful user experiences with high-quality code"
+        />
+        <meta name="twitter:site" content="@mariogyd" />
+        <meta name="twitter:creator" content="@mariogyd" />
       </Head>
 
       <section aria-label="posts" className={styles.section_posts}>
@@ -44,7 +50,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
           <div className={styles.section_posts_container}>
             <div>
               {posts.map((post, index) => {
-                if (index % 2 !== 0) {
+                if ((index + 1) % 2 !== 0) {
                   return (
                     <Post
                       title={post.title}
@@ -58,7 +64,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
             </div>
             <div>
               {posts.map((post, index) => {
-                if (index % 2 === 0) {
+                if ((index + 1) % 2 === 0) {
                   return (
                     <Post
                       title={post.title}
