@@ -1,4 +1,4 @@
-import { Container, SocialIcon } from "@components";
+import { Container, BlogPostImage } from "@components";
 import { PostMeta } from "@interface/Post";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
@@ -11,7 +11,6 @@ import { getPostFromSlug, getSlugs } from "@api";
 import "highlight.js/styles/base16/material-darker.css";
 import styles from "@styles/pages/BlogPost.module.css";
 import Link from "next/link";
-import Image from "./Image";
 import { icons } from "@constants/icons.constants";
 
 type BlogPostProps = {
@@ -91,7 +90,7 @@ const BlogPost: NextPage<BlogPostProps> = ({ post }) => {
           <h3 className={styles.post_date}>
             {new Date(post.meta.date).toLocaleDateString()}
           </h3>
-          <MDXRemote {...post.source} components={{ Image }} />
+          <MDXRemote {...post.source} components={{ BlogPostImage }} />
         </article>
         <a
           href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
