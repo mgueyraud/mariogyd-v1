@@ -185,7 +185,7 @@ const Home: NextPage = () => {
             I&#39;m always open to new opportunities. If you have any question
             or doubt, feel free to drop an email, I&#39;ll get back to you soon!
           </p>
-          <Button href="mailto:hi@mariogyd.com">Say Hello</Button>
+          <Button href="mailto:mgueyraud.junior@gmail.com">Say Hello</Button>
         </Container>
         <div className="u-hide-sm">
           <div className={styles.section_contact_bg_img}>

@@ -18,14 +18,14 @@ export const experiences = [
       
       UI development of different products such as Newsletters, Insurance and Economist web pages.<br><br>
       
-      Experience on API implementations with Laravel and Codeigniter.<br><br>`,
+      Experience on API implementations with Laravel and Codeigniter.`,
     },
     {
       title: "Internship",
       company: "Teixidó",
       start: "December 2017",
       end: "February 2018",
-      description: `Learned the fundamentals of web development.
+      description: `Learned the fundamentals of web development.<br><br>
   
     Implementation of a CRUD for a Bank web Page.`,
     },
