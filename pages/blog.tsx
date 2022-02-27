@@ -75,6 +75,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
         defer
         onLoad={() => {
           const $masonryLayout = document.querySelector(".masonry-layout");
+          //@ts-ignore
           const msnry = new Masonry($masonryLayout, {
             itemSelector: "article",
             columnWidth: 520,
