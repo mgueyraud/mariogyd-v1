@@ -20,6 +20,7 @@ import { projects } from "utils/constants/projects.constants";
 import { useRouter } from "next/router";
 import { getAllPosts } from "@api*";
 import { PostMeta } from "@interface/Post";
+import Script from "next/script";
 
 type HomeProps = { posts: PostMeta[] };
 
@@ -209,33 +210,16 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
             <Title id="work-title">Check out some articles I wrote</Title>
           </div>
           <div className={styles.section_articles_container}>
-            <div>
-              {posts.map((post, index) => {
-                if ((index + 1) % 2 !== 0) {
-                  return (
-                    <Post
-                      title={post.title}
-                      date={new Date(post.date).toLocaleDateString()}
-                      description={post.excerpt}
-                      slug={post.slug}
-                    />
-                  );
-                }
-              })}
-            </div>
-            <div>
-              {posts.map((post, index) => {
-                if ((index + 1) % 2 == 0) {
-                  return (
-                    <Post
-                      title={post.title}
-                      date={new Date(post.date).toLocaleDateString()}
-                      description={post.excerpt}
-                      slug={post.slug}
-                    />
-                  );
-                }
-              })}
+            <div className="masonry-layout">
+              {posts.map((post, index) => (
+                <Post
+                  key={post.slug}
+                  title={post.title}
+                  date={new Date(post.date).toLocaleDateString()}
+                  description={post.excerpt}
+                  slug={post.slug}
+                />
+              ))}
             </div>
           </div>
           <div className={styles.section_articles_show_more}>
@@ -268,6 +252,18 @@ const Home: NextPage<HomeProps> = ({ posts }) => {
           <Image src={ovalDegradeBottom} alt="" />
         </div>
       </section>
+      <Script
+        id="#masonry-script"
+        src="./assets/js/masonry.min.js"
+        defer
+        onLoad={() => {
+          const $masonryLayout = document.querySelector(".masonry-layout");
+          const msnry = new Masonry($masonryLayout, {
+            itemSelector: "article",
+            columnWidth: 520,
+          });
+        }}
+      />
     </>
   );
 };
