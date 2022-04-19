@@ -96,7 +96,11 @@ const Header = () => {
             </div>
           </nav>
           <div className="u-hide-sm">
-            <Button variant="outline" href="/">
+            <Button
+              variant="outline"
+              href="/assets/files/resume.pdf"
+              target="_blank"
+            >
               Resume
             </Button>
           </div>
