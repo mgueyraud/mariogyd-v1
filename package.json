@@ -2,7 +2,7 @@
   "name": "mariogyd",
   "description": "Personal website",
   "author": "Mario Gueyraud <mgueyraud.junior@gmail.com>",
-  "license":"MIT",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/mgueyraud/mariogyd.git"
