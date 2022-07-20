@@ -1,9 +1,5 @@
-import { Header } from "@partials";
+import { Footer, Header } from "@partials";
 import "@styles/global.css";
-import Image from "next/image";
-import behanceLogo from "@assets/img/icons/behance-logo.svg";
-import githubLogo from "@assets/img/icons/github.svg";
-
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
@@ -29,24 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <main id="skip-to-content">
         <Component {...pageProps} />
       </main>
-      <footer className="footer">
-        <a
-          href="https://github.com/mgueyraud/mariogyd"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Built By Mario Gueyraud&nbsp;
-          <Image src={githubLogo} alt="Behance Logo" />
-        </a>
-        <a
-          href="https://www.behance.net/diegocamacho5/moodboards"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Designed By Diego Camacho&nbsp;
-          <Image src={behanceLogo} alt="Behance Logo" />
-        </a>
-      </footer>
+      <Footer />
     </>
   );
 }

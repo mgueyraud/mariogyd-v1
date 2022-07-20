@@ -1,11 +1,23 @@
 export const experiences = [
     {
       title: "Frontend Engineer",
-      company: "Lithium",
-      start: "July 2021",
+      company: "Belk",
+      start: " Jun 2022",
       end: "Now",
       description:
-        "Outsourced to an US Company called <a href='https://tonic3.com/' target='blank' rel='noreferrer'>Tonic3</a>, currently working on a product for <a href='https://www.averydennison.com/en/home.html' target='blank' rel='noreferrer'>Avery Dennison</a>, with React and Typescript.",
+        "Maintenance and development of their e-commerce",
+    },
+    {
+      title: "React Developer",
+      company: "Tonic3",
+      start: "July 2021",
+      end: "Jun 2022",
+      description:
+        `Development of a product for <a href="https://www.averydennison.com/en/home.html" target="_blank">Avery Dennison</a>, where they provide some services to their clients, using ReactJS, Typescript, Material UI.<br><br>
+  
+        Maintenance of the component library.<br><br>
+        
+        Lead the frontend team, estimated and assigned tasks to other developers.<br><br>`,
     },
     {
       title: "Frontend and UI Developer",
