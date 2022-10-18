@@ -11,6 +11,8 @@ type ProjectProps = {
   description: string;
   cta: string;
   imageSource: string | StaticImageData;
+  ariaLabelLink: string;
+  altImage: string;
 };
 
 const Project: React.FC<ProjectProps> = ({
@@ -21,6 +23,8 @@ const Project: React.FC<ProjectProps> = ({
   languages,
   description,
   cta,
+  ariaLabelLink,
+  altImage,
 }) => {
   const image = (
     <div
@@ -31,7 +35,7 @@ const Project: React.FC<ProjectProps> = ({
       <a href={cta} target="_blank" rel="noreferrer">
         <GradientImage
           src={imageSource}
-          alt={title}
+          alt={altImage}
           rotate={is == "even" ? "left" : "right"}
         />
       </a>
@@ -46,11 +50,11 @@ const Project: React.FC<ProjectProps> = ({
     >
       <div className={styles.project__number}>{number}</div>
       <p className={styles.project__featured}>Featured Project</p>
-      <h1>
+      <h3>
         <a href={cta} target="_blank" rel="noreferrer">
           {title}
         </a>
-      </h1>
+      </h3>
       <p className={styles.project__languages}>
         Languages: <span>{languages.join(", ")}</span>
       </p>
@@ -60,6 +64,7 @@ const Project: React.FC<ProjectProps> = ({
         href={cta}
         target="_blank"
         rel="noreferrer"
+        aria-label={ariaLabelLink}
       >
         See Project
       </Button>

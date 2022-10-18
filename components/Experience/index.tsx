@@ -23,10 +23,10 @@ const Experience: React.FC<ExperienceProps> = ({
         <div className={styles.singleExperience__line} />
       </div>
       <div className={styles.singleExperience__content}>
-        <h1 className={styles.singleExperience__title}>
+        <h3 className={styles.singleExperience__title}>
           {title} at{" "}
           <span className={styles.singleExperience__company}>{company}</span>
-        </h1>
+        </h3>
         <p className={styles.singleExperience__date}>
           {start} <span className={styles.singleExperience__end}>- {end}</span>
         </p>

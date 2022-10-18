@@ -94,7 +94,7 @@
   height: 410px;
 }
 
-.section_contact h1 {
+.section_contact h2 {
   font-family: "Poppins";
   font-weight: bold;
   font-size: 70px;
@@ -183,7 +183,7 @@
     align-items: unset;
   }
 
-  .section_contact h1 {
+  .section_contact h2 {
     font-size: 40px;
   }
 

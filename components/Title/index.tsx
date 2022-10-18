@@ -13,9 +13,9 @@ const Title: React.FC<TitleProps> = ({ children, ...rest }) => {
       <div className={styles.title__image}>
         <Image src={degrade_circle} alt="" />
       </div>
-      <h1 className={styles.title} {...rest}>
+      <h2 className={styles.title} {...rest}>
         {children}
-      </h1>
+      </h2>
     </div>
   );
 };

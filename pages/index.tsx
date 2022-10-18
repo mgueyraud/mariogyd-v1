@@ -60,8 +60,8 @@ const Home: NextPage = () => {
           >
             Hi my name is,
           </p>
-          <h1 className={styles.bigTitle}>Mario Gueyraud</h1>
           <h1 className={styles.bigTitle}>
+            Mario Gueyraud <br />
             I&#39;m a <span className={styles.gradientText}>Frontend</span>{" "}
             Engineer.
           </h1>
@@ -180,7 +180,7 @@ const Home: NextPage = () => {
         aria-labelledby="contact-title"
       >
         <Container size="lg">
-          <h1 id="contact-title">Get In Touch</h1>
+          <h2 id="contact-title">Get In Touch</h2>
           <p>
             I&#39;m always open to new opportunities. If you have any question
             or doubt, feel free to drop an email, I&#39;ll get back to you soon!

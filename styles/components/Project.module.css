@@ -2,7 +2,7 @@
   display: flex;
 }
 
-.project h1 > a {
+.project h3 > a {
   font-family: "Poppins";
   font-weight: 600;
   font-size: 20px;
@@ -10,8 +10,8 @@
   text-decoration: none;
 }
 
-.project h1 > a:focus,
-.project h1 > a:active {
+.project h3 > a:focus,
+.project h3 > a:active {
   outline: dotted var(--color-bright-turquoise);
   transition: all 0.2s;
 }
